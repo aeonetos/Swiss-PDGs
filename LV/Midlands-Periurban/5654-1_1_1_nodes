@@ -1,0 +1,7 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::2056" } },
+"features": [
+{ "type": "Feature", "properties": { "osmid": "54", "x": 2525320.5104589639, "y": 1158369.5222066436, "el_dmd": 0.01178988739340177, "Category": "Midlands-Periurban", "consumers": "True", "label": "intersect_30", "source": true, "voltage": 1.0 }, "geometry": { "type": "Point", "coordinates": [ 2525320.510458963923156, 1158369.522206643596292 ] } }
+]
+}

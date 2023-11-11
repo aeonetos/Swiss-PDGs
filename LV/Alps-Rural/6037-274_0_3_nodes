@@ -1,0 +1,13 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::2056" } },
+"features": [
+{ "type": "Feature", "properties": { "osmid": "0", "x": 2585533.9203244769, "y": 1101276.0031750896, "el_dmd": 0.057482595775831834, "Category": "Alps-Rural", "consumers": "True", "label": "intersect_0", "source": false, "voltage": 0.99975931412765018 }, "geometry": { "type": "Point", "coordinates": [ 2585533.920324476901442, 1101276.003175089601427 ] } },
+{ "type": "Feature", "properties": { "osmid": "1", "x": 2585534.4628955643, "y": 1101275.7532791612, "el_dmd": 0.053503379252438046, "Category": "Alps-Rural", "consumers": "True", "label": "intersect_3", "source": false, "voltage": 0.99971374785781275 }, "geometry": { "type": "Point", "coordinates": [ 2585534.462895564269274, 1101275.75327916117385 ] } },
+{ "type": "Feature", "properties": { "osmid": "2", "x": 2585531.1570986547, "y": 1101277.275854188, "el_dmd": 0.049601602501810185, "Category": "Alps-Rural", "consumers": "True", "label": "intersect_4", "source": true, "voltage": 1.0 }, "geometry": { "type": "Point", "coordinates": [ 2585531.157098654657602, 1101277.275854188017547 ] } },
+{ "type": "Feature", "properties": { "osmid": "3", "x": 2585526.4001694517, "y": 1101279.3962087801, "el_dmd": 0.04416687080069525, "Category": "Alps-Rural", "consumers": "True", "label": "intersect_2", "source": false, "voltage": 0.99964840895454654 }, "geometry": { "type": "Point", "coordinates": [ 2585526.400169451721013, 1101279.396208780119196 ] } },
+{ "type": "Feature", "properties": { "osmid": "7", "x": 2585510.8237621072, "y": 1101286.2456945241, "el_dmd": 0.0, "Category": "Alps-Rural", "consumers": "False", "label": "1272352366", "source": false, "voltage": 0.99957127323304018 }, "geometry": { "type": "Point", "coordinates": [ 2585510.823762107174844, 1101286.245694524142891 ] } },
+{ "type": "Feature", "properties": { "osmid": "5", "x": 2585496.0040467973, "y": 1101350.5025067374, "el_dmd": 0.0, "Category": "Alps-Rural", "consumers": "False", "label": "1919046812", "source": false, "voltage": 0.99917675850889076 }, "geometry": { "type": "Point", "coordinates": [ 2585496.004046797286719, 1101350.502506737364456 ] } },
+{ "type": "Feature", "properties": { "osmid": "4", "x": 2585576.8112634034, "y": 1101310.7478614354, "el_dmd": 0.0031776346328128585, "Category": "Alps-Rural", "consumers": "True", "label": "intersect_1", "source": false, "voltage": 0.99876379925671199 }, "geometry": { "type": "Point", "coordinates": [ 2585576.811263403389603, 1101310.747861435404047 ] } }
+]
+}

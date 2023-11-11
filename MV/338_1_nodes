@@ -1,0 +1,11 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::2056" } },
+"features": [
+{ "type": "Feature", "properties": { "osmid": "2", "x": 2545714.0180008588, "y": 1200862.5213418524, "el_dmd": 0.13470536482051648, "lv_grid": "6512-43_0_3", "consumers": "True", "label": "476021861", "source": false, "voltage": 0.99995018333352348 }, "geometry": { "type": "Point", "coordinates": [ 2545714.018000858835876, 1200862.5213418523781 ] } },
+{ "type": "Feature", "properties": { "osmid": "3", "x": 2545654.9411614933, "y": 1200829.2290491033, "el_dmd": 0.12582882048924005, "lv_grid": "6512-44_0_3", "consumers": "True", "label": "476021847", "source": false, "voltage": 0.99996176781366464 }, "geometry": { "type": "Point", "coordinates": [ 2545654.941161493305117, 1200829.229049103334546 ] } },
+{ "type": "Feature", "properties": { "osmid": "4", "x": 2545579.0406964361, "y": 1200824.2850405253, "el_dmd": 0.0, "lv_grid": "-1", "consumers": "False", "label": "476021850", "source": true, "voltage": 1.0 }, "geometry": { "type": "Point", "coordinates": [ 2545579.040696436073631, 1200824.285040525253862 ] } },
+{ "type": "Feature", "properties": { "osmid": "5", "x": 2545428.7574753165, "y": 1200700.0308857162, "el_dmd": 0.0, "lv_grid": "-1", "consumers": "False", "label": "269073011", "source": false, "voltage": 0.99996814232775832 }, "geometry": { "type": "Point", "coordinates": [ 2545428.757475316524506, 1200700.030885716201738 ] } },
+{ "type": "Feature", "properties": { "osmid": "6", "x": 2545414.9488281617, "y": 1200696.7220148344, "el_dmd": 0.12359474959618667, "lv_grid": "6512-6_0_6", "consumers": "True", "label": "3724865503", "source": false, "voltage": 0.99996591619693997 }, "geometry": { "type": "Point", "coordinates": [ 2545414.948828161694109, 1200696.722014834405854 ] } }
+]
+}

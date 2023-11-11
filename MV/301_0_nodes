@@ -1,0 +1,12 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::2056" } },
+"features": [
+{ "type": "Feature", "properties": { "osmid": "0", "x": 2646059.8331845342, "y": 1254946.6413456397, "el_dmd": 0.14655330363781649, "lv_grid": "4004-1_0_3", "consumers": "True", "label": "1773397137", "source": false, "voltage": 0.99997673555166122 }, "geometry": { "type": "Point", "coordinates": [ 2646059.833184534218162, 1254946.641345639713109 ] } },
+{ "type": "Feature", "properties": { "osmid": "1", "x": 2646042.3792452258, "y": 1254908.7351397066, "el_dmd": 0.0, "lv_grid": "-1", "consumers": "False", "label": "441123186", "source": false, "voltage": 0.99996880778025943 }, "geometry": { "type": "Point", "coordinates": [ 2646042.379245225805789, 1254908.73513970663771 ] } },
+{ "type": "Feature", "properties": { "osmid": "2", "x": 2646077.9739507441, "y": 1255003.8551598056, "el_dmd": 0.0, "lv_grid": "-1", "consumers": "False", "label": "2084775516", "source": true, "voltage": 1.0 }, "geometry": { "type": "Point", "coordinates": [ 2646077.973950744140893, 1255003.855159805621952 ] } },
+{ "type": "Feature", "properties": { "osmid": "5", "x": 2643011.8964745956, "y": 1255532.4197191806, "el_dmd": 0.15033026334082167, "lv_grid": "4173-1_0_4", "consumers": "True", "label": "1894481083", "source": false, "voltage": 0.99907319749820978 }, "geometry": { "type": "Point", "coordinates": [ 2643011.896474595647305, 1255532.419719180557877 ] } },
+{ "type": "Feature", "properties": { "osmid": "4", "x": 2646396.4466489227, "y": 1256104.6904357523, "el_dmd": 0.0, "lv_grid": "-1", "consumers": "False", "label": "1475258583", "source": false, "voltage": 0.99927734648814914 }, "geometry": { "type": "Point", "coordinates": [ 2646396.446648922748864, 1256104.690435752272606 ] } },
+{ "type": "Feature", "properties": { "osmid": "3", "x": 2646369.2294544829, "y": 1256115.2736240553, "el_dmd": 0.32629871387386805, "lv_grid": "4004-2_0_6", "consumers": "True", "label": "29986071", "source": false, "voltage": 0.99926484549257544 }, "geometry": { "type": "Point", "coordinates": [ 2646369.229454482905567, 1256115.273624055320397 ] } }
+]
+}

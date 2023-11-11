@@ -1,0 +1,7 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::2056" } },
+"features": [
+{ "type": "Feature", "properties": { "osmid": 0, "x": 2565543.7054955508, "y": 1227369.028465254, "el_dmd": "12.13290843415239", "Category": "Jura-Rural", "consumers": "True", "label": "intersect_0" }, "geometry": { "type": "Point", "coordinates": [ 2565543.705495550762862, 1227369.028465253999457 ] } }
+]
+}

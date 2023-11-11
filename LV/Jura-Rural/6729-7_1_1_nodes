@@ -1,0 +1,9 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::2056" } },
+"features": [
+{ "type": "Feature", "properties": { "osmid": "104", "x": 2585004.5345680267, "y": 1241725.3217306635, "el_dmd": 0.0017889110865417857, "Category": "Jura-Rural", "consumers": "True", "label": "1200416673", "source": false, "voltage": 0.99911313564529458 }, "geometry": { "type": "Point", "coordinates": [ 2585004.534568026661873, 1241725.321730663534254 ] } },
+{ "type": "Feature", "properties": { "osmid": "103", "x": 2584995.3572398261, "y": 1241743.0784076243, "el_dmd": 0.0, "Category": "Jura-Rural", "consumers": "False", "label": "1200415499", "source": false, "voltage": 0.99916411817782846 }, "geometry": { "type": "Point", "coordinates": [ 2584995.357239826116711, 1241743.078407624270767 ] } },
+{ "type": "Feature", "properties": { "osmid": "5", "x": 2585185.9004772203, "y": 1242009.6785637215, "el_dmd": 0.0056500949089663141, "Category": "Jura-Rural", "consumers": "True", "label": "intersect_2", "source": true, "voltage": 1.0 }, "geometry": { "type": "Point", "coordinates": [ 2585185.90047722030431, 1242009.678563721477985 ] } }
+]
+}

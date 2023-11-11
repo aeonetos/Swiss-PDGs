@@ -1,0 +1,7 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::2056" } },
+"features": [
+{ "type": "Feature", "properties": { "osmid": "250", "x": 2581929.779636669, "y": 1226037.9488770547, "el_dmd": 0.0070647004849684943, "Category": "Jura-Periurban", "consumers": "True", "label": "intersect_184", "source": true, "voltage": 1.0 }, "geometry": { "type": "Point", "coordinates": [ 2581929.779636668972671, 1226037.948877054732293 ] } }
+]
+}

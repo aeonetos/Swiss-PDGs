@@ -1,0 +1,7 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::2056" } },
+"features": [
+{ "type": "Feature", "properties": { "osmid": 0, "x": 2765015.7521291231, "y": 1179062.3070031279, "el_dmd": "32.98450553491627", "Category": "Alps-Rural", "consumers": "True", "label": "440678555" }, "geometry": { "type": "Point", "coordinates": [ 2765015.752129123080522, 1179062.307003127876669 ] } }
+]
+}

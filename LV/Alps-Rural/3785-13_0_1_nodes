@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::2056" } },
+"features": [
+{ "type": "Feature", "properties": { "osmid": "0", "x": 2789594.6574174073, "y": 1159605.7862956962, "el_dmd": 0.0069724187981200563, "Category": "Alps-Rural", "consumers": "True", "label": "intersect_0", "source": true, "voltage": 1.0 }, "geometry": { "type": "Point", "coordinates": [ 2789594.657417407259345, 1159605.786295696161687 ] } },
+{ "type": "Feature", "properties": { "osmid": "1", "x": 2789595.9381159409, "y": 1159520.0674510077, "el_dmd": 0.0037731928332082089, "Category": "Alps-Rural", "consumers": "True", "label": "intersect_2", "source": false, "voltage": 0.99946751286152613 }, "geometry": { "type": "Point", "coordinates": [ 2789595.938115940894932, 1159520.067451007664204 ] } }
+]
+}

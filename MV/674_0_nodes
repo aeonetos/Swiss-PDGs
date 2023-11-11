@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::2056" } },
+"features": [
+{ "type": "Feature", "properties": { "osmid": "0", "x": 2612733.257283614, "y": 1267607.2562328747, "el_dmd": 3.1674835890733983, "lv_grid": "-1", "consumers": "True", "label": "intersect_2", "source": false, "voltage": 0.99999968169954434 }, "geometry": { "type": "Point", "coordinates": [ 2612733.257283614017069, 1267607.2562328747008 ] } },
+{ "type": "Feature", "properties": { "osmid": "1", "x": 2612733.1800334798, "y": 1267607.2397849555, "el_dmd": 6.6330042411626788, "lv_grid": "-1", "consumers": "True", "label": "intersect_0", "source": true, "voltage": 1.0 }, "geometry": { "type": "Point", "coordinates": [ 2612733.180033479817212, 1267607.239784955512732 ] } }
+]
+}

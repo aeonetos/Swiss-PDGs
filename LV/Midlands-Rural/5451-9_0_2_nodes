@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::2056" } },
+"features": [
+{ "type": "Feature", "properties": { "osmid": "0", "x": 2570013.7796693123, "y": 1193469.2137663225, "el_dmd": 0.086745304155627201, "Category": "Midlands-Rural", "consumers": "True", "label": "intersect_0", "source": true, "voltage": 1.0 }, "geometry": { "type": "Point", "coordinates": [ 2570013.779669312294573, 1193469.213766322471201 ] } },
+{ "type": "Feature", "properties": { "osmid": "3", "x": 2570020.2707902906, "y": 1193788.9619655851, "el_dmd": 0.032712667993419285, "Category": "Midlands-Rural", "consumers": "True", "label": "3800902434", "source": false, "voltage": 0.98485796113350232 }, "geometry": { "type": "Point", "coordinates": [ 2570020.270790290553123, 1193788.961965585127473 ] } }
+]
+}
