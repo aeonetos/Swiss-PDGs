@@ -15,7 +15,7 @@ In addition, the MV and LV folders have the following content:
 | Rural     | 8264       | 1178      | 3323      |
 | Urban     | 5316       | 375      | 10365      |
 
-Note that an edge and a node file define every grid. Hence, in the cases when node files do not have a matching edge file, it means that these demand nodes are then connected to the MV infrastructure. For more detail, check Section 3 of [A. Oneto et. al].
+Note that an edge and a node file define every grid. Hence, in the cases when node files do not have a matching edge file, it means that these demand nodes are then connected to the MV infrastructure. For more detail, check Section 3 of [A. Oneto et. al](to appear in TechRxiv).
 - MV: 792 grids.
 ## References
 For a detailed description of the framework through which the data was generated, please go to 
