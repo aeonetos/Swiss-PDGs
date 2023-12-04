@@ -1,5 +1,6 @@
 # Inferred low- and medium-voltage distribution grid models for Switzerland
 Welcome to our repository, where we share our inferred geo-referenced models of Switzerland's low- and medium-voltage power distribution grids (PDGs). These models were obtained using the framework introduced by [A. Oneto et. al](https://www.techrxiv.org/articles/preprint/Large-Scale_Inference_of_Geo-Referenced_Power_Distribution_Grids_Using_Open_Data/24607662), and stem from the meticulous analysis of publicly available data on power demand and transport infrastructure. With 792 medium-voltage grids and 34,920 low-voltage grids, our dataset represents all of Switzerland's power distribution landscape. We invite you to harness this rich dataset to explore, analyze, and contribute to a deeper understanding of large-scale power distribution systems.
+
 **When using the data, the article must be referenced and acknowledged**
 
 ## Files provided
