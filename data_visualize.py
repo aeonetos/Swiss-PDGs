@@ -316,7 +316,7 @@ if __name__ == '__main__':
 
     # --------------------------- Article ---------------------------
     # set the title of the page
-    St.title("Swiss power distribution grids visualizer")
+    st.title("Swiss power distribution grids visualizer")
     st.subheader("The data is based on the results obtained in [A. Oneto et al.](https://doi.org/10.36227/techrxiv.24607662.v1)")
     st.write("When using the data, you must refer and acknowledge the article.")
     
