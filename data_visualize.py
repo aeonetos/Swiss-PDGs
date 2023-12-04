@@ -293,9 +293,9 @@ class GridVisualize:
         # show the raw data
         if st.checkbox('Show raw data of %s' % self.test_id):
             st.subheader('Nodes')
-            st.dataframe(pd.DataFrame(show_nodes))
+            St.data frame(pd.DataFrame(show_nodes))
             st.subheader('Edges')
-            st.dataframe(pd.DataFrame(show_edges))
+            st.data frame(pd.DataFrame(show_edges))
         return
 
 
@@ -314,6 +314,12 @@ if __name__ == '__main__':
         sub_dict = {i[:-6]: list_folders[j] for i in sub_files}
         dict_test_id_folder.update(sub_dict)
 
+    # --------------------------- Article ---------------------------
+    # set the title of the page
+    St.title("Swiss power distribution grids visualizer")
+    st.subheader("The data is based on the results obtained in [A. Oneto et al.](https://doi.org/10.36227/techrxiv.24607662.v1)")
+    st.write("When using the data, you must refer and acknowledge the article.")
+    
     # --------------------------- MV network ---------------------------
     # set the title of the page
     st.title("The MV network")
