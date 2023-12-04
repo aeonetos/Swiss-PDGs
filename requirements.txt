@@ -1,0 +1,6 @@
+geopandas==0.14.0
+numpy==1.25.0
+pandas==2.0.3
+pydeck==0.8.0
+streamlit==1.28.2
+streamlit-jupyter==0.2.1
