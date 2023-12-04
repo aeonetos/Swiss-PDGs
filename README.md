@@ -143,6 +143,6 @@ The line types are shown below. For more details, go [here](https://pandapower.r
 - load: the ratio of apparent power transferred in the line with s_nom in the steady state AC power flow analysis.
 
 ## References
-For a detailed description of the framework through which the data was generated, please go to 
+For a detailed description of the framework through which the data was generated and for citing it, please go to 
 
 [A. Oneto, B. Gjorgiev, F. Tettamanti, and G.Sansavini “Large-Scale Inference of Geo-Referenced Power Distribution Grids Using Open Data”, 2023 in TechRxiv.](https://www.techrxiv.org/articles/preprint/Large-Scale_Inference_of_Geo-Referenced_Power_Distribution_Grids_Using_Open_Data/24607662)
