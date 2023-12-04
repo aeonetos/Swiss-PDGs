@@ -293,9 +293,9 @@ class GridVisualize:
         # show the raw data
         if st.checkbox('Show raw data of %s' % self.test_id):
             st.subheader('Nodes')
-            St.data frame(pd.DataFrame(show_nodes))
+            st.dataframe(pd.DataFrame(show_nodes))
             st.subheader('Edges')
-            st.data frame(pd.DataFrame(show_edges))
+            st.dataframe(pd.DataFrame(show_edges))
         return
 
 
@@ -376,10 +376,6 @@ if __name__ == '__main__':
     # show the statistics in a table
     lv.show_statistics()
     # add a checkbox that can be clicked to show the raw data
-    # lv.show_raw_data()
-    if st.checkbox('Show raw data of %s' % test_case_lv):
-        st.subheader('Nodes')
-        st.write(lv.nodes)
-        st.subheader('Edges')
-        st.write(lv.edges)
+    lv.show_raw_data()
+
 
