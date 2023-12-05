@@ -314,6 +314,12 @@ if __name__ == '__main__':
         sub_dict = {i[:-6]: list_folders[j] for i in sub_files}
         dict_test_id_folder.update(sub_dict)
 
+    # --------------------------- Article ---------------------------
+    # set the title of the page
+    st.title("Swiss power distribution grids visualizer")
+    st.subheader("The data is based on the results obtained in [A. Oneto et al.](https://doi.org/10.36227/techrxiv.24607662.v1)")
+    st.write("When using the data, you must refer and acknowledge the article.")
+    
     # --------------------------- MV network ---------------------------
     # set the title of the page
     st.title("The MV network")
@@ -370,10 +376,6 @@ if __name__ == '__main__':
     # show the statistics in a table
     lv.show_statistics()
     # add a checkbox that can be clicked to show the raw data
-    # lv.show_raw_data()
-    if st.checkbox('Show raw data of %s' % test_case_lv):
-        st.subheader('Nodes')
-        st.write(lv.nodes)
-        st.subheader('Edges')
-        st.write(lv.edges)
+    lv.show_raw_data()
+
 

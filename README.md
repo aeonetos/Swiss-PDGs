@@ -40,6 +40,17 @@ Inferred LV grids in Switzerland.
 Inferred MV grids in Switzerland.
 </p>
 
+## Web app for data visualization
+
+We have developed a web app for visualizing the data. The app can be accessed [here](https://swiss-pdgs.streamlit.app/). A snapshot of it is presented below for illustrative purposes.
+
+<p align="center">
+<img width="500" alt="swiss_pdgs_app" src="https://github.com/aeonetos/Swiss-PDGs/assets/101415556/81767306-f38e-4d98-89f2-df824ef223fa">
+</p>
+<p align="center">
+Web app for power distribution grids visualization.
+</p>
+
 ## Detailed description of the data files
 
 The geometries of the geojson files are in the EPSG:2056 projection.
