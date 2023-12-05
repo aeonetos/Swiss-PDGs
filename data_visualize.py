@@ -47,8 +47,7 @@ def show_all_possible_test_ids(id_list, num_col):
         # add some empty elements to make the length of the list a multiple of 10
         id_list = id_list + [''] * (num_col - len(id_list) % num_col)
     df = pd.DataFrame(np.array(id_list).reshape(-1, num_col))
-    style = df.style.hide()
-    st.write(style.to_html(), unsafe_allow_html=True)
+    st.write(df)
 
     # darken the background of the table
     st.markdown(""" <style>
