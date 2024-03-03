@@ -1,5 +1,5 @@
 # Inferred low- and medium-voltage distribution grid models for Switzerland
-Welcome to our repository, where we share our inferred geo-referenced models of Switzerland's low- and medium-voltage power distribution grids (PDGs). These models were obtained using the framework introduced by [A. Oneto et. al](https://www.techrxiv.org/articles/preprint/Large-Scale_Inference_of_Geo-Referenced_Power_Distribution_Grids_Using_Open_Data/24607662), and stem from the meticulous analysis of publicly available data on power demand and transport infrastructure. With 792 medium-voltage grids and 34,920 low-voltage grids, our dataset represents all of Switzerland's power distribution landscape. We invite you to harness this rich dataset to explore, analyze, and contribute to a deeper understanding of large-scale power distribution systems.
+Welcome to our repository, where we share our inferred geo-referenced models of Switzerland's low- and medium-voltage power distribution grids (PDGs). These models were obtained using the framework introduced by [A. Oneto et. al](https://doi.org/10.36227/techrxiv.24607662.v1), and stem from the meticulous analysis of publicly available data on power demand and transport infrastructure. With 792 medium-voltage grids and 34,920 low-voltage grids, our dataset represents all of Switzerland's power distribution landscape. We invite you to harness this rich dataset to explore, analyze, and contribute to a deeper understanding of large-scale power distribution systems.
 
 **When using the data, the article must be referenced and acknowledged**
 
@@ -22,7 +22,7 @@ In addition, the MV and LV folders have the following content:
 
 </div>
 
-Note that an edge and a node file define every grid. Hence, in the cases when node files do not have a matching edge file, it means that these demand nodes are then connected to the MV infrastructure. For more detail, check Section 3 of [A. Oneto et. al](https://www.techrxiv.org/articles/preprint/Large-Scale_Inference_of_Geo-Referenced_Power_Distribution_Grids_Using_Open_Data/24607662).
+Note that an edge and a node file define every grid. Hence, in the cases when node files do not have a matching edge file, it means that these demand nodes are then connected to the MV infrastructure. For more detail, check Section 3 of [A. Oneto et. al](https://doi.org/10.36227/techrxiv.24607662.v1).
 
 <p align="center">
 <img width="500" alt="lvgrids" src="https://github.com/aeonetos/Swiss-PDGs/assets/101415556/309d8564-474e-4bf5-831b-67b1670a8485">
@@ -156,4 +156,4 @@ The line types are shown below. For more details, go [here](https://pandapower.r
 ## References
 For a detailed description of the framework through which the data was generated and for citing it, please go to 
 
-[A. Oneto, B. Gjorgiev, F. Tettamanti, and G.Sansavini “Large-Scale Inference of Geo-Referenced Power Distribution Grids Using Open Data”, 2023 in TechRxiv.](https://www.techrxiv.org/articles/preprint/Large-Scale_Inference_of_Geo-Referenced_Power_Distribution_Grids_Using_Open_Data/24607662)
+[A. Oneto, B. Gjorgiev, F. Tettamanti, and G.Sansavini “Large-Scale Inference of Geo-Referenced Power Distribution Grids Using Open Data”, 2023 in TechRxiv.](https://doi.org/10.36227/techrxiv.24607662.v1)
