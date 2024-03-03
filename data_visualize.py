@@ -5,6 +5,10 @@ import pydeck as pdk
 import os
 import pandas as pd
 from copy import deepcopy
+import json
+import math
+import random
+import ast
 
 
 def get_all_test_id(grid_type):
@@ -12,6 +16,7 @@ def get_all_test_id(grid_type):
     This function gets all the test IDs
     :return: list, all the test IDs
     """
+    # todo: first click, store it in a dictionary, then read from the dictionary
     if grid_type == 'MV':
         path_base = grid_type + "/"
         # get all the files in the path
@@ -24,7 +29,7 @@ def get_all_test_id(grid_type):
         for j in range(len(list_folders)):
             path = path_base + list_folders[j] + "/"
             sub_files = os.listdir(path)
-            list_files+=sub_files
+            list_files += sub_files
 
     # get all the possible test IDs, that is remove the "_nodes" and "_edges" from the file names
     list_ids = [i[:-6] for i in list_files]
@@ -36,56 +41,18 @@ def get_all_test_id(grid_type):
 
 
 # create a class containing the functions to visualize the data
-def show_all_possible_test_ids(id_list, num_col):
+def show_all_possible_test_ids(id_list):
     """
     This function shows all the possible test IDs
     :param id_list: list, all the possible test IDs
     :return:
     """
-    # write them into a table of 10 columns
-    if len(id_list) % num_col != 0:
+    # write them into a table of 5 columns
+    if len(id_list) % 5 != 0:
         # add some empty elements to make the length of the list a multiple of 10
-        id_list = id_list + [''] * (num_col - len(id_list) % num_col)
-    df = pd.DataFrame(np.array(id_list).reshape(-1, num_col))
-    st.write(df)
-
-    # darken the background of the table
-    st.markdown(""" <style>
-    table td:nth-child(1) {
-        background-color: #e6e6e6;
-    }
-    table td:nth-child(2) {
-        background-color: #e6e6e6;
-    }
-    table td:nth-child(3) {
-        background-color: #e6e6e6;
-    }
-    table td:nth-child(4) {
-        background-color: #e6e6e6;
-    }
-    table td:nth-child(5) {
-        background-color: #e6e6e6;
-    }
-    table td:nth-child(6) {
-    background-color: #e6e6e6;
-    }
-    table td:nth-child(7) {
-    background-color: #e6e6e6;
-    }
-    table td:nth-child(8) {
-    background-color: #e6e6e6;
-    }
-    table td:nth-child(9) {
-    background-color: #e6e6e6;
-    }
-    table td:nth-child(10) {
-    background-color: #e6e6e6;
-    }
-    table td:nth-child(11) {
-    background-color: #e6e6e6;
-    }
-    </style> """, unsafe_allow_html=True)
-    return
+        id_list = id_list + [''] * (5 - len(id_list) % 5)
+    df = pd.DataFrame(np.array(id_list).reshape(-1, 5))
+    st.dataframe(df)
 
 
 class GridVisualize:
@@ -104,8 +71,22 @@ class GridVisualize:
         else:
             path = self.grid_type + "/" + dict_test_id_folder[self.test_id] + "/"
 
-        file_n, file_e = self.test_id + "_nodes", self.test_id + "_edges"
-        nodes_gdf, edges_gdf = gpd.read_file(path + file_n), gpd.read_file(path + file_e)
+        if isinstance(self.test_id, str):
+            file_n, file_e = self.test_id + "_nodes", self.test_id + "_edges"
+            nodes_gdf, edges_gdf = gpd.read_file(path + file_n), gpd.read_file(path + file_e)
+        elif isinstance(self.test_id, list) & (len(self.test_id) != 0):
+            # consider the canton case
+            nodes_gdf = gpd.GeoDataFrame()
+            edges_gdf = gpd.GeoDataFrame()
+            for i in self.test_id:
+                sub_nodes = gpd.read_file(path + i + "_nodes")
+                sub_edges = gpd.read_file(path + i + "_edges")
+                nodes_gdf = pd.concat([nodes_gdf, sub_nodes])
+                edges_gdf = pd.concat([edges_gdf, sub_edges])
+        else:
+            st.write("There is no such grid within the canton")
+            raise ValueError
+
         # rename the x and y columns
         nodes_gdf.rename(columns={'x': 'longitude', 'y': 'latitude'}, inplace=True)
         # convert the x y (epsg=2056) to lat long with geopandas
@@ -161,7 +142,7 @@ class GridVisualize:
         """
         # data preprocessing
         if self.grid_type == 'MV':
-            size_scale = 50
+            size_scale = 50  # todo: automatically adjust the size scale
         else:
             size_scale = 500
         self.nodes['size'] = self.nodes['el_dmd'] * size_scale
@@ -174,7 +155,7 @@ class GridVisualize:
         self.nodes.loc[osmid_sub, 'b'] = 164
         return self.nodes, self.edges
 
-    def draw_layers(self, pitch=15):
+    def draw_layers(self, pitch=None):
         """
         This function draws the layers, including ScatterplotLayer and PathLayer
         :return:
@@ -183,23 +164,14 @@ class GridVisualize:
         self.nodes, self.edges = self.data_preprocessing_for_drawing()
         # get the map style
         mapstyle = st.sidebar.selectbox(
-            "Choose Map Style for %s:" % self.test_id,
+            "Choose Map Style for %s:" % self.grid_type,
             options=["road", "satellite"],
             format_func=str.capitalize,
             key=self.grid_type,
         )
         available_map_styles = {'road': pdk.map_styles.ROAD, 'satellite': 'mapbox://styles/mapbox/satellite-v9'}
         # add a layer to show the edges and nodes
-        pydeck_layers = pdk.Deck(
-            map_style=f"{available_map_styles[mapstyle]}",
-            initial_view_state={
-                "latitude": self.get_initial_middle_point()[0],
-                "longitude": self.get_initial_middle_point()[1],
-                "zoom": self.get_initial_zoom(),
-                "pitch": pitch,
-            },
-            layers=[
-                pdk.Layer(
+        pathlayer = pdk.Layer(
                     "PathLayer",
                     data=[list(i.coords) for i in self.edges.geometry],
                     get_filled_color=[0, 255, 0],
@@ -208,8 +180,8 @@ class GridVisualize:
                     get_width=0.1,
                     get_path='-'
 
-                ),
-                pdk.Layer(
+                )
+        scatterplotlayer = pdk.Layer(
                     "ScatterplotLayer",
                     data=self.nodes,
                     pickable=True,
@@ -224,12 +196,57 @@ class GridVisualize:
                     get_radius="size",
                     get_fill_color=['r', 'g', 'b'],
                     get_line_color=[0, 0, 0],
-                ),
+                )
+        if self.grid_type == 'MV':
+            polygon_plot = pd.read_csv('../data_processing/canton_coordinates_plot.csv')
+            polygon_plot['coordinates'] = polygon_plot['coordinates'].apply(ast.literal_eval)
+        else:
+            # todo
+            polygon_plot = pd.read_csv('data_processing/canton_coordinates_plot_LV.csv')
+            polygon_plot['coordinates'] = polygon_plot['coordinates'].apply(ast.literal_eval)
+        polygonlayer = pdk.Layer(
+                    "PolygonLayer",
+                    polygon_plot,
+                    # id="geojson",
+                    # opacity=0.8,
+                    # stroked=False,
+                    get_polygon="coordinates",
+                    # filled=True,
+                    # extruded=True,
+                    # wireframe=True,
+                    get_fill_color="fill_color",
+                    # get_line_color=[255, 255, 255],
+                    auto_highlight=True,
+                    pickable=True,
+                )
+        textlayer = pdk.Layer(
+                    "TextLayer",
+                    data=polygon_plot,
+                    get_position=['centroid_x', 'centroid_y'],
+                    get_text="NAME",
+                    # get_color=[255, 255, 255],
+                    get_angle=0,
+                    get_size=16,
+                    get_alignment_baseline="'center'",
+                )
+        pydeck_layers = pdk.Deck(
+            map_style=f"{available_map_styles[mapstyle]}",
+            initial_view_state={
+                "latitude": self.get_initial_middle_point()[0],
+                "longitude": self.get_initial_middle_point()[1],
+                "zoom": self.get_initial_zoom(),
+                "pitch": pitch,
+            },
+            layers=[
+                pathlayer,
+                scatterplotlayer,
+                polygonlayer,
+                textlayer,
             ]
         )
         st.write(pydeck_layers)
         # add a button to make the map back to the initial view
-        if st.button('Reset the map for %s' % self.test_id):
+        if st.button('Reset the map for %s' % self.grid_type):
             pydeck_layers.update()
         return pydeck_layers
 
@@ -289,7 +306,7 @@ class GridVisualize:
         show_edges.rename(columns={'geo': 'geometry'}, inplace=True)
 
         # show the raw data
-        if st.checkbox('Show raw data of %s' % self.test_id):
+        if st.checkbox('Show raw data of %s' % self.grid_type):
             st.subheader('Nodes')
             st.dataframe(pd.DataFrame(show_nodes))
             st.subheader('Edges')
@@ -298,46 +315,59 @@ class GridVisualize:
 
 
 if __name__ == '__main__':
+    data_path = '../data_processing/'
+    # ----------------------- Process LV ----------------------
+    # load the dictionary connecting the test ID and the folder name
+    with open(data_path + 'file_folder_lv.json') as json_file:
+        dict_test_id_folder = json.load(json_file)
 
-    # --------------------------- Preprocessing ---------------------------
-    # for LV network
-    path_base = "LV/"
-    list_files = []
-    list_folders = os.listdir(path_base)
-    dict_test_id_folder = {}
-    for j in range(len(list_folders)):
-        path = path_base + list_folders[j] + "/"
-        sub_files = os.listdir(path)
-        # create a dictionary, the key is the test ID, the value is the folder name
-        sub_dict = {i[:-6]: list_folders[j] for i in sub_files}
-        dict_test_id_folder.update(sub_dict)
+    # ----------------------- Process cantons ----------------------
+    # load the dictionary connecting the canton and the grid
+    with open(data_path + 'dict_canton_grid_MV.json') as json_file:
+        dict_canton_grid_mv = json.load(json_file)
+    with open(data_path + 'dict_canton_grid_LV.json') as json_file:
+        dict_canton_grid_lv = json.load(json_file)
+    list_canton_names = list(dict_canton_grid_mv.keys())
 
-    # --------------------------- Article ---------------------------
-    # set the title of the page
-    st.title("Swiss power distribution grids visualizer")
-    st.subheader("The data is based on the results obtained in [A. Oneto et al.](https://doi.org/10.36227/techrxiv.24607662.v1)")
-    st.write("When using the data, you must refer and acknowledge the article.")
-    
     # --------------------------- MV network ---------------------------
     # set the title of the page
     st.title("The MV network")
     # get all the test IDs
-    list_ids = get_all_test_id('MV')
+    with open(data_path + 'list_test_id_MV.json') as json_file:
+        list_ids_mv = json.load(json_file)
+    # get the ids and the corresponding canton names
+    table_ids_canton = pd.read_csv(data_path + 'table_grid_canton_MV.csv')
     # create a text field to type in the ID of the test case
-    st.subheader("Please enter the ID of the test case")
-    # create a box to type in the ID of the test case
-    test_case = st.text_input('test case ID', list_ids[0], key='MV_text_input_id')
-
+    st.subheader("Please choose the test case")
+    # create a text field to type in canton name in the same line
+    cols = st.columns(2)
+    with cols[0]:
+        test_id = st.text_input('test case ID', list_ids_mv[0], key='MV_text_input_id')
+    with cols[1]:
+        test_canton = st.selectbox('canton name', list_canton_names, key='MV_text_input_canton')
     # create a checkbox that can be clicked to show all possible test IDs
     if st.checkbox('Show all possible test IDs', key='MV_checkbox'):
-        show_all_possible_test_ids(list_ids, 10)
+        # show_all_possible_test_ids(list_ids_mv)
+        st.dataframe(table_ids_canton)
+
+    # add a single checkbox to choose the test case
+    genre = st.radio(
+        "Which one do you want to show?",
+        ["***Single grid***", "***Canton region***"],
+        captions=["show selected test id.", "show the whole canton region"])
 
     # check if the test case ID is valid
-    if test_case not in list_ids:
+    if test_id not in list_ids_mv:
         st.write("Please enter a valid test case ID")
         st.stop()
 
-    # create a object of the class
+    if genre == "***Single grid***":
+        test_case = test_id
+    else:
+        # get the test IDs in the canton
+        test_case = dict_canton_grid_mv[test_canton]
+
+    # create an object of the class
     mv = GridVisualize('MV', test_case)
     # draw the layers
     mv_layers = mv.draw_layers()
@@ -352,7 +382,8 @@ if __name__ == '__main__':
     # set the title of the page
     st.title("The LV network")
     # get all the test IDs
-    list_ids_lv = get_all_test_id('LV')
+    with open(data_path + 'list_test_id_LV.json') as json_file:
+        list_ids_lv = json.load(json_file)
     # create a box to type in the ID of the test case
     st.subheader("Please enter the ID of the test case")
     test_case_lv = st.text_input("test case ID", list_ids_lv[0], key='LV_text_input')
@@ -363,9 +394,9 @@ if __name__ == '__main__':
 
     # create a checkbox that can be clicked to show all possible test IDs
     if st.checkbox('Show all possible test IDs', key='LV_checkbox'):
-        show_all_possible_test_ids(list_ids_lv, 5)
+        show_all_possible_test_ids(list_ids_lv)
 
-    # create a object of the class
+    # create an object of the class
     lv = GridVisualize('LV', test_case_lv)
     # draw the layers
     lv_layers = lv.draw_layers()
@@ -374,6 +405,93 @@ if __name__ == '__main__':
     # show the statistics in a table
     lv.show_statistics()
     # add a checkbox that can be clicked to show the raw data
+    # lv.show_raw_data()
     lv.show_raw_data()
 
+    # --------------------------- Canton ---------------------------
+
+    st.title("The canton")
+    # # load the canton boundary
+    # canton_boundary = gpd.read_file('data_processing/canton_union.geojson')
+    # # project the canton boundary to lat long
+    # canton_boundary['geometry'] = canton_boundary['geometry'].to_crs(epsg=4326)
+    # # convert the polygon to x, y
+    # canton_boundary['coordinates'] = 1  # set dummy value
+    # canton_boundary['coordinates'] = canton_boundary['coordinates'].astype(object)
+    # for i in range(len(canton_boundary)):
+    #     if canton_boundary['geometry'][i].geom_type == 'Polygon':
+    #         x, y = canton_boundary['geometry'][i].exterior.coords.xy
+    #         canton_boundary['coordinates'][i] = [[[x[j], y[j]] for j in range(len(x))]]
+    #     else:  # MultiPolygon
+    #         multi_coordinates = []
+    #         for k, j in enumerate(list(canton_boundary['geometry'][i].geoms)):
+    #             m, n = j.exterior.coords.xy
+    #             multi_coordinates.append([[m[l], n[l]] for l in range(len(m))])
+    #         canton_boundary['coordinates'][i] = multi_coordinates
+    #
+    # # get the canton name
+    # list_canton_names = list(canton_boundary['NAME'])
+    # # assign different colors to different cantons
+    # canton_colors = {
+    #     'Aargau': [0, 0, 255],
+    #     'Appenzell Ausserrhoden': [0, 255, 0],
+    #     'Appenzell Innerrhoden': [255, 0, 0],
+    #     'Basel-Landschaft': [255, 255, 0],
+    #     'Basel-Stadt': [255, 0, 255],
+    #     'Bern': [0, 255, 255],
+    #     'Fribourg': [255, 128, 0],
+    #     'Genève': [0, 128, 255],
+    #     'Glarus': [128, 0, 255],
+    #     'Graubünden': [0, 255, 128],
+    #     'Jura': [128, 255, 0],
+    #     'Luzern': [255, 0, 128],
+    #     'Neuchâtel': [0, 255, 128],
+    #     'Nidwalden': [128, 0, 255],
+    #     'Obwalden': [0, 128, 255],
+    #     'Schaffhausen': [128, 255, 0],
+    #     'Schwyz': [255, 0, 128],
+    #     'Solothurn': [0, 255, 128],
+    #     'St. Gallen': [128, 0, 255],
+    #     'Thurgau': [0, 128, 255], # not shown
+    #     'Ticino': [128, 255, 0],
+    #     'Uri': [255, 0, 128],
+    #     'Valais': [0, 255, 128],
+    #     'Vaud': [128, 0, 255],
+    #     'Zug': [0, 128, 255],
+    #     'Zürich': [128, 255, 0],
+    # }
+    # canton_boundary['fill_color'] = canton_boundary['NAME'].apply(lambda x: canton_colors[x])
+    # # create a polygon layer
+    # canton_boundary.to_csv('data_processing/canton_coordinates_plot.csv', index=False)
+    data_plot = pd.read_csv('../data_processing/canton_coordinates_plot.csv')
+    data_plot['coordinates'] = data_plot['coordinates'].apply(ast.literal_eval)
+    # data_plot.iloc[0, 'coordinates'] = data_plot[data_plot['NAME'] == 'Aargau']['coordinates'][0][1]
+
+    polygon_layer = pdk.Layer(
+        "PolygonLayer",
+        # a[a['NAME'] == 'Jura'],
+        data_plot,
+        # id="geojson",
+        # opacity=0.8,
+        # stroked=True,
+        get_polygon="coordinates",
+        # filled=True,
+        # extruded=True,
+        # wireframe=True,
+        get_fill_color='fill_color',
+        # get_line_color=[255, 255, 255],
+        auto_highlight=True,
+        pickable=True,
+        pickable_color=[255, 255, 255],
+    )
+    st.write(pdk.Deck(
+        polygon_layer,
+        initial_view_state=pdk.ViewState(
+            latitude=46.8,
+            longitude=8.3,
+            zoom=7,
+            maxZoom=16,
+        ),
+        map_style=pdk.map_styles.DARK,
+    ))
 

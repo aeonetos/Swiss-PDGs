@@ -1,6 +1,11 @@
-geopandas==0.14.0
-numpy==1.25.0
-pandas==1.5.3
-pydeck==0.8.0
+geopandas~=0.13.2
+numpy~=1.26.2
+pandas~=1.5.1
+pydeck~=0.8.1b0
 streamlit==1.28.2
 streamlit-jupyter==0.2.1
+folium==0.14.0
+streamlit-folium==0.16.0
+leafmap~=0.30.0
+shapely~=2.0.1
+scipy~=1.10.0
