@@ -1,5 +1,5 @@
 # Inferred low- and medium-voltage distribution grid models for Switzerland
-Welcome to our repository, where we share our inferred geo-referenced models of Switzerland's low- and medium-voltage power distribution grids (PDGs). These models were obtained using the framework introduced by [A. Oneto et. al](https://doi.org/10.36227/techrxiv.24607662.v1), and stem from the meticulous analysis of publicly available data on power demand and transport infrastructure. With 792 medium-voltage grids and 34,920 low-voltage grids, our dataset represents all of Switzerland's power distribution landscape. We invite you to harness this rich dataset to explore, analyze, and contribute to a deeper understanding of large-scale power distribution systems.
+Welcome to our repository, where we share our inferred geo-referenced models of Switzerland's low- and medium-voltage power distribution grids (PDGs). These models were obtained using the framework introduced by [A. Oneto et. al](https://doi.org/10.36227/techrxiv.24607662.v1), and stem from the meticulous analysis of publicly available data on power demand and transport infrastructure. With 879 medium-voltage grids and 34,920 low-voltage grids, our dataset represents all of Switzerland's power distribution landscape. We invite you to harness this rich dataset to explore, analyze, and contribute to a deeper understanding of large-scale power distribution systems.
 
 **When using the data, the article must be referenced and acknowledged**
 
@@ -31,10 +31,10 @@ Note that an edge and a node file define every grid. Hence, in the cases when no
 Inferred LV grids in Switzerland.
 </p>
 
-- MV: 792 grids.
+- MV: 879 grids.
 
 <p align="center">
-<img width="500" alt="mvgrids" src="https://github.com/aeonetos/Swiss-PDGs/assets/101415556/a8a0c1c8-76c3-41e1-b667-cd8b92d6d9ff">
+<img width="500" alt="mvall" src="https://github.com/aeonetos/Swiss-PDGs/assets/101415556/d165d1e9-e56c-486a-b6f7-ca3238edbee7">
 </p>
 <p align="center">
 Inferred MV grids in Switzerland.
