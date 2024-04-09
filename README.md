@@ -42,7 +42,7 @@ Inferred MV grids in Switzerland.
 
 ## Web app for data visualization
 
-We have developed a web app for visualizing the data. The app can be accessed [here](https://swiss-pdgs.streamlit.app/). A snapshot of it is presented below for illustrative purposes.
+We are developing a web app for visualizing the data. A snapshot of it is presented below for illustrative purposes. It will be publicly accessible soon.
 
 <p align="center">
 <img width="500" alt="swiss_pdgs_app" src="https://github.com/aeonetos/Swiss-PDGs/assets/101415556/81767306-f38e-4d98-89f2-df824ef223fa">
