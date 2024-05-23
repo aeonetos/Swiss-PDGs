@@ -122,8 +122,8 @@ The line types are shown below. For more details, go [here](https://pandapower.r
   
 | Urbanization type | Model   |
 | :---         |    :---        | 
-| Urban   | NAYY4x240SE |
-| Periurban & Rural     | NAYY4x150SE |
+| Urban & Periurban   | NAYY4x240SE |
+| Rural     | NAYY4x150SE |
 
 </div>
 
