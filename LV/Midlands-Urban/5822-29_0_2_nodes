@@ -1,9 +1,0 @@
-{
-"type": "FeatureCollection",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::2056" } },
-"features": [
-{ "type": "Feature", "properties": { "osmid": "0", "x": 2563001.0912445318, "y": 1189264.6171968482, "el_dmd": 0.0092095797930808482, "Category": "Midlands-Urban", "consumers": "True", "label": "intersect_0", "source": true, "voltage": 1.0 }, "geometry": { "type": "Point", "coordinates": [ 2563001.091244531795382, 1189264.617196848150343 ] } },
-{ "type": "Feature", "properties": { "osmid": "1", "x": 2562975.668657172, "y": 1189250.1702763119, "el_dmd": 0.0011195216968962968, "Category": "Midlands-Urban", "consumers": "True", "label": "intersect_1", "source": false, "voltage": 0.99997032629695692 }, "geometry": { "type": "Point", "coordinates": [ 2562975.668657172005624, 1189250.170276311924681 ] } },
-{ "type": "Feature", "properties": { "osmid": "2", "x": 2563009.0221747011, "y": 1189269.1241149013, "el_dmd": 0.0037029866854777277, "Category": "Midlands-Urban", "consumers": "True", "label": "intersect_2", "source": false, "voltage": 0.99996937804402819 }, "geometry": { "type": "Point", "coordinates": [ 2563009.022174701094627, 1189269.124114901293069 ] } }
-]
-}

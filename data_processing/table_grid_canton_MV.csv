@@ -6,17 +6,23 @@ grid_id,region_name
 101_1,Valais
 102_0,Valais
 103_0,Valais
+103_1,Valais
+103_2,Valais
 104_0,Valais
+104_1,Valais
 105_0,Valais
+105_1,Valais
 106_0,Valais
 107_0,Bern
 107_1,Bern
 108_0,Valais
+108_1,Valais
 109_0,Valais
 10_0,Zürich
 10_1,St. Gallen
 110_0,Vaud
 110_1,Valais
+110_2,Valais
 111_0,Valais
 112_0,Valais
 113_0,Valais
@@ -29,12 +35,13 @@ grid_id,region_name
 119_0,Bern
 119_1,Fribourg
 11_0,Uri
-11_1,Uri
 120_0,Fribourg
 121_0,Bern
+121_1,Bern
 122_0,Bern
 122_1,Bern
 123_0,Bern
+123_1,Bern
 124_0,Luzern
 125_0,Luzern
 126_0,Luzern
@@ -42,12 +49,14 @@ grid_id,region_name
 128_0,Luzern
 129_0,Luzern
 129_1,Bern
+129_2,Bern
 12_0,Uri
-12_1,Uri
 130_0,Luzern
 131_0,Luzern
+131_1,Luzern
 132_0,Uri
 133_0,Schwyz
+133_1,Schwyz
 134_0,Schwyz
 135_0,Schwyz
 136_0,Obwalden
@@ -62,10 +71,11 @@ grid_id,region_name
 140_0,Obwalden
 141_0,Obwalden
 142_0,Nidwalden
+142_1,Nidwalden
 143_0,Nidwalden
-143_1,Nidwalden
 144_0,Glarus
 145_0,Glarus
+145_1,Glarus
 146_0,Vaud
 147_0,Bern
 148_0,Appenzell Innerrhoden
@@ -73,6 +83,7 @@ grid_id,region_name
 14_0,Uri
 150_0,St. Gallen
 151_0,Graubünden
+151_1,Graubünden
 152_0,Glarus
 153_0,St. Gallen
 153_1,St. Gallen
@@ -80,12 +91,14 @@ grid_id,region_name
 155_0,St. Gallen
 155_1,St. Gallen
 156_0,St. Gallen
+156_1,St. Gallen
 157_0,Graubünden
 158_0,Graubünden
 159_0,Graubünden
 15_0,Schwyz
 160_0,Graubünden
 161_0,Graubünden
+161_1,Graubünden
 162_0,Graubünden
 163_0,Graubünden
 164_0,Graubünden
@@ -95,7 +108,6 @@ grid_id,region_name
 168_0,Graubünden
 169_0,Graubünden
 16_0,Schwyz
-16_1,Schwyz
 170_0,Graubünden
 171_0,Graubünden
 172_0,Graubünden
@@ -103,7 +115,9 @@ grid_id,region_name
 174_0,Graubünden
 175_0,Graubünden
 176_0,Graubünden
+176_1,Graubünden
 177_0,Graubünden
+177_1,Graubünden
 178_0,Graubünden
 179_0,Graubünden
 17_0,Schwyz
@@ -113,13 +127,16 @@ grid_id,region_name
 182_0,Bern
 183_0,Bern
 184_0,Bern
+184_1,Bern
 185_0,Ticino
 186_0,Ticino
+186_1,Ticino
 187_0,Ticino
 188_0,Ticino
 189_0,Ticino
 18_0,Schwyz
 190_0,Vaud
+190_1,Vaud
 191_0,Vaud
 192_0,Valais
 193_0,Vaud
@@ -128,34 +145,43 @@ grid_id,region_name
 195_1,Bern
 196_0,Valais
 197_0,Valais
+197_1,Valais
 198_0,Valais
 199_0,Bern
 19_0,Schwyz
 1_0,Schwyz
 200_0,Valais
+200_1,Valais
 201_0,Valais
 202_0,Valais
 203_0,Valais
 204_0,Valais
+204_1,Valais
 205_0,Valais
 206_0,Valais
 207_0,Valais
 208_0,Bern
+208_1,Bern
 209_0,Bern
-20_0,Glarus
+20_0,Schwyz
+20_1,Glarus
 210_0,Bern
 211_0,Luzern
 211_1,Luzern
+211_2,Luzern
 212_0,Luzern
 212_1,Luzern
+212_2,Luzern
 213_0,Luzern
 214_0,Luzern
+214_1,Luzern
 215_0,Luzern
 216_0,Luzern
 217_0,Luzern
 218_0,Luzern
 219_0,Luzern
 21_0,St. Gallen
+21_1,St. Gallen
 220_0,Luzern
 221_0,Luzern
 222_0,Zürich
@@ -166,6 +192,8 @@ grid_id,region_name
 226_0,Glarus
 227_0,Glarus
 228_0,Zug
+228_1,Zug
+228_2,Zug
 229_0,Zug
 22_0,Schwyz
 22_1,Schwyz
@@ -178,6 +206,7 @@ grid_id,region_name
 235_0,St. Gallen
 236_0,St. Gallen
 237_0,St. Gallen
+237_1,St. Gallen
 238_0,St. Gallen
 239_0,Graubünden
 23_0,Luzern
@@ -211,7 +240,9 @@ grid_id,region_name
 264_0,Valais
 265_0,Valais
 266_0,Valais
+266_1,Valais
 267_0,Valais
+267_1,Valais
 268_0,Valais
 269_0,Valais
 26_0,Zürich
@@ -238,7 +269,6 @@ grid_id,region_name
 285_0,Basel-Landschaft
 286_0,Solothurn
 287_0,Basel-Landschaft
-287_1,Solothurn
 288_0,Solothurn
 288_1,Basel-Landschaft
 289_0,Basel-Landschaft
@@ -247,14 +277,15 @@ grid_id,region_name
 291_0,Basel-Landschaft
 291_1,Solothurn
 292_0,Solothurn
-292_1,Solothurn
 293_0,Basel-Landschaft
 293_1,Jura
+293_2,Jura
 294_0,Solothurn
 295_0,Basel-Landschaft
 296_0,Basel-Landschaft
 297_0,Basel-Landschaft
 298_0,Aargau
+298_1,Aargau
 299_0,Basel-Landschaft
 29_0,Fribourg
 2_0,Luzern
@@ -275,18 +306,20 @@ grid_id,region_name
 30_0,Fribourg
 310_0,Bern
 311_0,Bern
-311_1,Jura
 312_0,Vaud
 312_1,Vaud
 312_2,Vaud
 313_0,Vaud
 314_0,Vaud
-314_1,Vaud
 315_0,Vaud
+315_1,Vaud
 316_0,Vaud
+316_1,Vaud
 317_0,Vaud
+317_1,Vaud
 318_0,Vaud
 319_0,Vaud
+319_1,Vaud
 31_0,Fribourg
 320_0,Neuchâtel
 320_1,Neuchâtel
@@ -298,27 +331,28 @@ grid_id,region_name
 325_0,Bern
 325_1,Bern
 326_0,Neuchâtel
+326_1,Neuchâtel
 327_0,Neuchâtel
 328_0,Neuchâtel
 329_0,Bern
 329_1,Jura
 32_0,Fribourg
 330_0,Jura
+330_1,Jura
 331_0,Jura
 332_0,Jura
+332_1,Jura
 333_0,Solothurn
 334_0,Solothurn
 335_0,Neuchâtel
 336_0,Vaud
 337_0,Vaud
 338_0,Neuchâtel
-338_1,Neuchâtel
 339_0,Vaud
 33_0,Fribourg
 340_0,Neuchâtel
 341_0,Jura
 342_0,Jura
-342_1,Jura
 343_0,Jura
 344_0,Jura
 344_1,Jura
@@ -326,10 +360,13 @@ grid_id,region_name
 346_0,Bern
 346_1,Bern
 347_0,Basel-Stadt
+347_1,Aargau
 348_0,Bern
 349_0,Zürich
 349_1,Zürich
+349_2,Zürich
 34_0,Zürich
+34_1,Thurgau
 350_0,Aargau
 350_1,Aargau
 351_0,Zürich
@@ -340,25 +377,30 @@ grid_id,region_name
 354_0,Luzern
 354_1,Luzern
 355_0,Zürich
+355_1,Zürich
 356_0,Zürich
 357_0,Zürich
 358_0,Zürich
 358_1,Zürich
 359_0,Zürich
 35_0,Thurgau
+35_1,Thurgau
 360_0,Zürich
 361_0,Zürich
+361_1,Zürich
 362_0,Zürich
 363_0,Zürich
 364_0,Zürich
 365_0,Zürich
-366_0,Fribourg
+366_0,Vaud
 366_1,Vaud
 366_2,Vaud
 367_0,Vaud
 367_1,Vaud
+367_2,Vaud
 368_0,Zürich
 368_1,Zürich
+368_2,Zürich
 369_0,Zürich
 369_1,Zürich
 36_0,Fribourg
@@ -367,10 +409,11 @@ grid_id,region_name
 370_0,Zürich
 371_0,Zürich
 372_0,Zürich
-372_1,Zürich
 373_0,Fribourg
 374_0,Thurgau
+374_1,Thurgau
 375_0,Fribourg
+375_1,Fribourg
 376_0,Fribourg
 377_0,Vaud
 377_1,Fribourg
@@ -380,8 +423,10 @@ grid_id,region_name
 37_1,Vaud
 380_0,Fribourg
 381_0,Fribourg
+381_1,Bern
 382_0,Fribourg
 383_0,Zürich
+383_1,Zürich
 384_0,Fribourg
 384_1,Vaud
 385_0,Bern
@@ -391,8 +436,10 @@ grid_id,region_name
 387_0,Bern
 387_1,Bern
 387_2,Bern
+387_3,Bern
 388_0,Zürich
 389_0,Zürich
+389_1,Zürich
 38_0,St. Gallen
 390_0,Solothurn
 391_0,Zürich
@@ -403,9 +450,8 @@ grid_id,region_name
 395_0,Solothurn
 396_0,Solothurn
 397_0,Aargau
-397_1,Aargau
-398_0,Solothurn
-398_1,Aargau
+398_0,Aargau
+398_1,Solothurn
 399_0,Basel-Landschaft
 39_0,Appenzell Ausserrhoden
 3_0,Luzern
@@ -418,13 +464,16 @@ grid_id,region_name
 403_1,Bern
 404_0,Bern
 405_0,Bern
+405_1,Bern
 406_0,Thurgau
 407_0,Thurgau
 408_0,St. Gallen
+408_1,St. Gallen
 409_0,St. Gallen
 409_1,Thurgau
 409_2,Thurgau
-40_0,St. Gallen
+40_0,Appenzell Ausserrhoden
+40_1,St. Gallen
 410_0,St. Gallen
 411_0,St. Gallen
 412_0,St. Gallen
@@ -433,57 +482,73 @@ grid_id,region_name
 415_0,Bern
 416_0,Bern
 417_0,Zürich
-417_1,Zürich
 418_0,Aargau
+418_1,Aargau
 419_0,Aargau
 41_0,Appenzell Ausserrhoden
 41_1,Appenzell Ausserrhoden
+41_2,Appenzell Ausserrhoden
+41_3,Appenzell Ausserrhoden
 420_0,Aargau
+420_1,Aargau
 421_0,Aargau
 422_0,Aargau
 423_0,Aargau
+423_1,Aargau
 424_0,Aargau
 424_1,Aargau
 425_0,Aargau
-425_1,Zürich
-425_2,Aargau
+425_1,Aargau
 426_0,Aargau
+426_1,Aargau
 427_0,Aargau
 427_1,Aargau
 428_0,Aargau
+428_1,Aargau
 429_0,Bern
 42_0,St. Gallen
 430_0,Aargau
+430_1,Aargau
 431_0,Bern
 432_0,Aargau
 433_0,Aargau
 434_0,Aargau
 435_0,Aargau
+435_1,Zug
 436_0,Aargau
 437_0,Thurgau
+437_1,Thurgau
 438_0,Thurgau
+438_1,Thurgau
 439_0,Thurgau
+439_1,Thurgau
 43_0,St. Gallen
 440_0,Thurgau
 440_1,Thurgau
 441_0,Thurgau
 442_0,Thurgau
-442_1,Thurgau
 443_0,Thurgau
-444_0,Neuchâtel
+444_0,Vaud
+444_1,Neuchâtel
+444_2,Neuchâtel
 445_0,Bern
 446_0,Bern
+446_1,Bern
 447_0,Vaud
 448_0,Vaud
 448_1,Vaud
 449_0,Vaud
 449_1,Vaud
 44_0,Appenzell Ausserrhoden
+44_1,St. Gallen
 450_0,Vaud
 451_0,Vaud
+451_1,Vaud
 452_0,Vaud
 453_0,Vaud
-454_0,Fribourg
+454_0,Vaud
+454_1,Fribourg
+454_2,Fribourg
 455_0,Vaud
 456_0,Bern
 457_0,Zürich
@@ -492,30 +557,32 @@ grid_id,region_name
 459_0,Genève
 459_1,Genève
 45_0,St. Gallen
-45_1,St. Gallen
 460_0,Genève
 461_0,Genève
 462_0,Genève
-462_1,Genève
 463_0,Genève
 464_0,Genève
 465_0,Bern
+465_1,Bern
 466_0,Bern
 467_0,Zürich
 468_0,Zürich
 469_0,Zürich
 46_0,St. Gallen
 46_1,St. Gallen
-470_0,Luzern
+470_0,Aargau
+470_1,Luzern
+470_2,Luzern
 471_0,Luzern
 472_0,Luzern
 473_0,Luzern
+473_1,Aargau
+473_2,Luzern
 474_0,Aargau
 475_0,Luzern
-475_1,Bern
+475_1,Luzern
 476_0,Bern
 477_0,Vaud
-477_1,Vaud
 478_0,Vaud
 479_0,Solothurn
 47_0,St. Gallen
@@ -527,9 +594,11 @@ grid_id,region_name
 484_0,Aargau
 485_0,Bern
 486_0,Aargau
+486_1,Aargau
 487_0,Thurgau
 487_1,Thurgau
 488_0,Thurgau
+488_1,Thurgau
 489_0,Thurgau
 48_0,St. Gallen
 490_0,Luzern
@@ -555,14 +624,15 @@ grid_id,region_name
 507_0,Fribourg
 508_0,Fribourg
 509_0,Zürich
+509_1,Zürich
 50_0,St. Gallen
-50_1,St. Gallen
 510_0,Zürich
 511_0,Zürich
 512_0,Zürich
 513_0,Zürich
 514_0,Zürich
 515_0,Zürich
+515_1,Aargau
 516_0,Zürich
 516_1,Zürich
 517_0,Zürich
@@ -582,6 +652,7 @@ grid_id,region_name
 529_1,Zürich
 52_0,St. Gallen
 530_0,Zürich
+530_1,Zürich
 531_0,Zürich
 532_0,Zürich
 533_0,Zürich
@@ -609,13 +680,13 @@ grid_id,region_name
 552_0,Zürich
 553_0,Zürich
 554_0,Schaffhausen
+554_1,Schaffhausen
 555_0,Basel-Landschaft
 556_0,Basel-Stadt
 557_0,Basel-Stadt
 558_0,Basel-Stadt
 559_0,Basel-Stadt
 55_0,Bern
-55_1,Bern
 560_0,Basel-Stadt
 561_0,Basel-Stadt
 562_0,Basel-Stadt
@@ -643,6 +714,7 @@ grid_id,region_name
 580_0,St. Gallen
 581_0,St. Gallen
 582_0,St. Gallen
+582_1,St. Gallen
 583_0,St. Gallen
 584_0,Bern
 585_0,St. Gallen
@@ -692,7 +764,6 @@ grid_id,region_name
 622_0,Vaud
 623_0,Vaud
 624_0,Vaud
-624_1,Vaud
 625_0,Vaud
 626_0,Vaud
 627_0,Vaud
@@ -700,7 +771,6 @@ grid_id,region_name
 629_0,Vaud
 62_0,Ticino
 630_0,Vaud
-630_1,Vaud
 631_0,Vaud
 632_0,Vaud
 633_0,Vaud
@@ -717,6 +787,7 @@ grid_id,region_name
 643_0,Genève
 644_0,Genève
 645_0,Genève
+645_1,Genève
 646_0,Genève
 647_0,Genève
 648_0,Genève
@@ -734,6 +805,7 @@ grid_id,region_name
 658_0,Genève
 659_0,Genève
 65_0,Ticino
+65_1,Ticino
 660_0,Genève
 661_0,Genève
 662_0,Genève
@@ -741,6 +813,7 @@ grid_id,region_name
 664_0,Genève
 665_0,Genève
 666_0,Genève
+666_1,Genève
 667_0,Genève
 668_0,Genève
 669_0,Zürich
@@ -757,18 +830,24 @@ grid_id,region_name
 70_0,Ticino
 70_1,Ticino
 71_0,Ticino
+71_1,Ticino
 72_0,Ticino
 72_1,Ticino
+72_2,Ticino
 73_0,Ticino
 73_1,Ticino
 74_0,Ticino
 75_0,Ticino
 76_0,Ticino
+76_1,Ticino
 77_0,Ticino
 78_0,Ticino
 79_0,Vaud
 7_0,Zürich
+7_1,Zürich
+7_2,Zürich
 80_0,Bern
+80_1,Bern
 81_0,Bern
 82_0,Bern
 83_0,Bern
@@ -776,14 +855,20 @@ grid_id,region_name
 85_0,Valais
 86_0,Valais
 87_0,Valais
+87_1,Valais
 88_0,Valais
 89_0,Valais
 8_0,Zürich
 8_1,Zürich
 90_0,Valais
+90_1,Valais
+90_2,Valais
 91_0,Valais
+91_1,Valais
 92_0,Bern
 93_0,Bern
+93_1,Bern
+93_2,Bern
 94_0,Bern
 95_0,Valais
 96_0,Valais
@@ -791,3 +876,5 @@ grid_id,region_name
 98_0,Bern
 99_0,Valais
 9_0,Zürich
+9_1,St. Gallen
+9_2,Zürich

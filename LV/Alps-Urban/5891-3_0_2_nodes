@@ -1,9 +1,0 @@
-{
-"type": "FeatureCollection",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::2056" } },
-"features": [
-{ "type": "Feature", "properties": { "osmid": "0", "x": 2564124.2231209129, "y": 1142044.8827667425, "el_dmd": 0.0049947515341391049, "Category": "Alps-Urban", "consumers": "True", "label": "intersect_0", "source": false, "voltage": 0.99734618460997126 }, "geometry": { "type": "Point", "coordinates": [ 2564124.223120912909508, 1142044.882766742492095 ] } },
-{ "type": "Feature", "properties": { "osmid": "3", "x": 2564590.3081822712, "y": 1142397.9844314035, "el_dmd": 0.0, "Category": "Alps-Urban", "consumers": "False", "label": "688516303", "source": true, "voltage": 1.0 }, "geometry": { "type": "Point", "coordinates": [ 2564590.308182271197438, 1142397.984431403456256 ] } },
-{ "type": "Feature", "properties": { "osmid": "2", "x": 2564605.1822620309, "y": 1142407.0408271311, "el_dmd": 0.032729220894538134, "Category": "Alps-Urban", "consumers": "True", "label": "intersect_1", "source": false, "voltage": 0.99948302856623383 }, "geometry": { "type": "Point", "coordinates": [ 2564605.182262030895799, 1142407.040827131131664 ] } }
-]
-}

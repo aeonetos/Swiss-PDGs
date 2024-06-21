@@ -1,7 +1,0 @@
-{
-"type": "FeatureCollection",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::2056" } },
-"features": [
-{ "type": "Feature", "properties": { "osmid": 0, "x": 2646249.8514812407, "y": 1267174.5048915166, "el_dmd": "76.42280952578479", "Category": "Midlands-Rural", "consumers": "True", "label": "intersect_0" }, "geometry": { "type": "Point", "coordinates": [ 2646249.851481240708381, 1267174.504891516640782 ] } }
-]
-}
