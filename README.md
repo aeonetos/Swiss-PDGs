@@ -4,6 +4,8 @@ Welcome to our repository, where we share our inferred geo-referenced models of 
 **When using the data, the article must be referenced and acknowledged**
 
 ## Files provided
+The datasets provide 3 types of data: geojson data, csv data for Matpower simulation and excel file for pandapower simulation. 
+### Geojson file
 The dataset has two main folders with medium-voltage (MV) and low-voltage (LV) grids. All the PDGs are described by two geojson files: a nodes file and an edges file. These geojson files can be read by software such as ArcGIS and QGIS, with which you can easily visualize all the components and their attributes. Moreover, you can read this data as GeoDataFrame using Python GeoPandas. For instance, if you have two files named 'nodes.geojson' and 'edges.geojson', you can access their information with the following code:
 ```python
 import geopandas as gpd
@@ -40,6 +42,26 @@ Inferred LV grids in Switzerland.
 Inferred MV grids in Switzerland.
 </p>
 
+### Pandapower data
+For the simulation in pandapower, we provide excel files containing the information of the grid for all LV and MV. For instance, if you want to load and test a grid, you can use the following code:
+'''python
+import pandapower as pp
+lv_grid=pp.from_excel('_grid.xlsx')
+pp.runpp(lv_grid)
+'''
+### Matpower data
+For the simulation in Matpower, csv files for the information of bus, branch, and generator are provided. To load and test the grid, you can use the following code:
+'''matlab
+bus = readtable(bus_data.csv, 'ReadVariableNames', true);
+branch = readtable(branch_data.csv, 'ReadVariableNames', true);
+gen = readtable(generator_data.csv, 'ReadVariableNames', true);
+mpc.version = '2';
+mpc.baseMVA = 100;
+mpc.bus = bus{:, :};
+mpc.branch = branch{:, :};
+mpc.gen = gen{:, :};
+results = runpf(mpc)
+'''
 ## Web app for data visualization
 
 We are developing a web app for visualizing the data. A snapshot of it is presented below for illustrative purposes. It will be publicly accessible soon.
