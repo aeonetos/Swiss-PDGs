@@ -1,0 +1,12 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::2056" } },
+"features": [
+{ "type": "Feature", "properties": { "osmid": "0", "x": 2572994.5510358787, "y": 1105727.5735471197, "el_dmd": 0.076189795668122132, "Category": "Alps-Urban", "consumers": "True", "label": "intersect_0", "source": false, "voltage": 0.98882779467815185 }, "geometry": { "type": "Point", "coordinates": [ 2572994.551035878714174, 1105727.573547119740397 ] } },
+{ "type": "Feature", "properties": { "osmid": "1", "x": 2572950.6767780725, "y": 1105700.485141078, "el_dmd": 0.0, "Category": "Alps-Urban", "consumers": "False", "label": "4835441967", "source": false, "voltage": 0.99244631303840869 }, "geometry": { "type": "Point", "coordinates": [ 2572950.676778072491288, 1105700.485141078010201 ] } },
+{ "type": "Feature", "properties": { "osmid": "3", "x": 2572894.2598688942, "y": 1105792.6399601505, "el_dmd": 0.073875858148947371, "Category": "Alps-Urban", "consumers": "True", "label": "intersect_3", "source": true, "voltage": 1.0 }, "geometry": { "type": "Point", "coordinates": [ 2572894.259868894238025, 1105792.639960150467232 ] } },
+{ "type": "Feature", "properties": { "osmid": "9", "x": 2572957.2098592599, "y": 1105837.8168247803, "el_dmd": 0.0044211885412999427, "Category": "Alps-Urban", "consumers": "True", "label": "intersect_1", "source": false, "voltage": 0.99968857363279062 }, "geometry": { "type": "Point", "coordinates": [ 2572957.209859259892255, 1105837.816824780311435 ] } },
+{ "type": "Feature", "properties": { "osmid": "12", "x": 2572832.2648225706, "y": 1105921.6501532497, "el_dmd": 0.0, "Category": "Alps-Urban", "consumers": "False", "label": "2196971663", "source": false, "voltage": 0.98949263133790621 }, "geometry": { "type": "Point", "coordinates": [ 2572832.264822570607066, 1105921.650153249735013 ] } },
+{ "type": "Feature", "properties": { "osmid": "10", "x": 2572787.0904263286, "y": 1105891.2103068517, "el_dmd": 0.079721213365149465, "Category": "Alps-Urban", "consumers": "True", "label": "intersect_2", "source": false, "voltage": 0.98549698267249419 }, "geometry": { "type": "Point", "coordinates": [ 2572787.090426328592002, 1105891.21030685165897 ] } }
+]
+}

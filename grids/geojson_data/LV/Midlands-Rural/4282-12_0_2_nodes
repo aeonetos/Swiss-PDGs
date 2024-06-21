@@ -1,0 +1,14 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::2056" } },
+"features": [
+{ "type": "Feature", "properties": { "osmid": "0", "x": 2633355.1877592299, "y": 1239746.3704089979, "el_dmd": 0.011034924817933174, "Category": "Midlands-Rural", "consumers": "True", "label": "intersect_0", "source": false, "voltage": 0.99617240860816292 }, "geometry": { "type": "Point", "coordinates": [ 2633355.187759229913354, 1239746.370408997870982 ] } },
+{ "type": "Feature", "properties": { "osmid": "1", "x": 2633371.9326842274, "y": 1239725.9149131305, "el_dmd": 0.0, "Category": "Midlands-Rural", "consumers": "False", "label": "7108658515", "source": false, "voltage": 0.99661315932217798 }, "geometry": { "type": "Point", "coordinates": [ 2633371.93268422735855, 1239725.914913130458444 ] } },
+{ "type": "Feature", "properties": { "osmid": "2", "x": 2633348.9736688295, "y": 1239696.3228857007, "el_dmd": 0.0, "Category": "Midlands-Rural", "consumers": "False", "label": "360471821", "source": false, "voltage": 0.99720388152255013 }, "geometry": { "type": "Point", "coordinates": [ 2633348.973668829537928, 1239696.322885700734332 ] } },
+{ "type": "Feature", "properties": { "osmid": "4", "x": 2633338.2846569419, "y": 1239723.3754768127, "el_dmd": 0.033059451651986344, "Category": "Midlands-Rural", "consumers": "True", "label": "intersect_1", "source": false, "voltage": 0.99766395617294601 }, "geometry": { "type": "Point", "coordinates": [ 2633338.284656941890717, 1239723.375476812710986 ] } },
+{ "type": "Feature", "properties": { "osmid": "3", "x": 2633331.7871416169, "y": 1239807.7860598227, "el_dmd": 0.0, "Category": "Midlands-Rural", "consumers": "False", "label": "360471784", "source": false, "voltage": 0.99453576120261589 }, "geometry": { "type": "Point", "coordinates": [ 2633331.787141616921872, 1239807.786059822654352 ] } },
+{ "type": "Feature", "properties": { "osmid": "5", "x": 2633335.0009681443, "y": 1239760.1988796717, "el_dmd": 0.055610983613558373, "Category": "Midlands-Rural", "consumers": "True", "label": "intersect_3", "source": true, "voltage": 1.0 }, "geometry": { "type": "Point", "coordinates": [ 2633335.000968144275248, 1239760.198879671748728 ] } },
+{ "type": "Feature", "properties": { "osmid": "8", "x": 2633299.9881387507, "y": 1239794.3882624232, "el_dmd": 0.0, "Category": "Midlands-Rural", "consumers": "False", "label": "9363752426", "source": false, "voltage": 0.99059270438518099 }, "geometry": { "type": "Point", "coordinates": [ 2633299.988138750661165, 1239794.388262423221022 ] } },
+{ "type": "Feature", "properties": { "osmid": "7", "x": 2633296.3347514849, "y": 1239792.8488125037, "el_dmd": 0.079579424912806881, "Category": "Midlands-Rural", "consumers": "True", "label": "intersect_2", "source": false, "voltage": 0.99013855876856272 }, "geometry": { "type": "Point", "coordinates": [ 2633296.334751484915614, 1239792.848812503740191 ] } }
+]
+}
