@@ -44,14 +44,14 @@ Inferred MV grids in Switzerland.
 
 ### Pandapower data
 For the simulation in pandapower, we provide excel files containing the information of the grid for all LV and MV. For instance, if you want to load and test a grid, you can use the following code:
-'''python
+```python
 import pandapower as pp
 lv_grid=pp.from_excel('_grid.xlsx')
 pp.runpp(lv_grid)
-'''
+```
 ### Matpower data
 For the simulation in Matpower, csv files for the information of bus, branch, and generator are provided. To load and test the grid, you can use the following code:
-'''matlab
+```matlab
 bus = readtable(bus_data.csv, 'ReadVariableNames', true);
 branch = readtable(branch_data.csv, 'ReadVariableNames', true);
 gen = readtable(generator_data.csv, 'ReadVariableNames', true);
@@ -61,7 +61,7 @@ mpc.bus = bus{:, :};
 mpc.branch = branch{:, :};
 mpc.gen = gen{:, :};
 results = runpf(mpc)
-'''
+```
 ## Web app for data visualization
 
 We are developing a web app for visualizing the data. A snapshot of it is presented below for illustrative purposes. It will be publicly accessible soon.
