@@ -614,7 +614,7 @@ class GridVisualize:
         # download the zip file
         with open('data_download.zip', 'rb') as f:
             file_download = f.read()
-            st.download_button(label='Download', data=file_download, file_name='data_download.zip',
+            st.download_button(label='Download', data=file_download, file_name='data_download_geo.zip',
                                mime='application/zip', key=None)
         # remove the zip file
         os.remove('data_download.zip')

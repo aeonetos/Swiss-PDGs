@@ -63,6 +63,8 @@ def lv_page():
 
         if lv:
             with st.expander("Download data", expanded=False):
+                placeholder = st.empty()
+                placeholder.write("Preparing the data..Please wait for a few seconds..")
                 col_download = st.columns(3)
                 with col_download[0]:
                     st.write("Press this button to download geojson file:")
@@ -73,6 +75,7 @@ def lv_page():
                 with col_download[2]:
                     st.write("Press this button to download matpower file:")
                     lv.download_matpower()
+                placeholder.empty()
             # show the statistics of the selected region
             if show:
                 placeholder = st.empty()
@@ -80,12 +83,12 @@ def lv_page():
                 #lv.draw_layers_folium(substation_show=substation_option, grid_show=grid_option)
                 lv.draw_layers()
                 placeholder.empty()
-            with st.expander("Loads Statistic Data", expanded=False):
+            '''with st.expander("Loads Statistic Data", expanded=False):
                 lv.show_histogram()
                 lv.show_statistics()
             # add a button to download the data
             with st.expander("Power Flow Data", expanded=False):
-                lv.PSA()
+                lv.PSA()'''
             with st.expander("Raw Data", expanded=False):
                 lv.show_raw_data()
             
@@ -123,8 +126,6 @@ def lv_page():
                 # remove the hint above
                 placeholder.empty()
             # add a button to download the data
-            with st.expander("Power Flow Data", expanded=False):
-                lv.PSA()
             with st.expander("Raw Data", expanded=False):
                 lv.show_raw_data()
             

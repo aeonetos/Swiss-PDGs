@@ -1,5 +1,5 @@
 # Swiss power distribution grid visualizer
-**this webpage is designed to visualize the grid distribution results based on [A. Oneto el at.](https://www.techrxiv.org/doi/full/10.36227/techrxiv.24607662.v1) For more information about the modelling of the [grid](https://github.com/aeonetos/Swiss-PDGs). When using the data, the article must be referenced and acknowledged.** 
+**this webpage is designed to visualize the grid distribution results based on [A. Oneto el at.](https://www.techrxiv.org/doi/full/10.36227/techrxiv.24607662.v3) For more information about the modelling of the [grid](https://github.com/aeonetos/Swiss-PDGs). When using the data, the article must be referenced and acknowledged.** 
 
 ## How to use
 1. Choose what you want to display, the options are:

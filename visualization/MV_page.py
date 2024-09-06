@@ -55,6 +55,8 @@ def mv_page():
             
         if mv: 
             with st.expander("Download Data", expanded=False):
+                placeholder = st.empty()
+                placeholder.write("Preparing the data..Please wait for a few seconds..")
                 col_download = st.columns(3)
                 with col_download[0]:
                     st.write("Press this bottom to download geojson file:")
@@ -65,6 +67,7 @@ def mv_page():
                 with col_download[2]:
                     st.write("Press this bottom to download matpower file:")
                     mv.download_matpower()
+                placeholder.empty()
             if show:  
                 placeholder = st.empty()
                 placeholder.write("The map is loading..Please wait for a few seconds..")
@@ -72,12 +75,12 @@ def mv_page():
                 mv.draw_layers()
                 # remove the hint above
                 placeholder.empty()
-            with st.expander("Loads Statistic Data", expanded=False):
+            '''with st.expander("Loads Statistic Data", expanded=False):
                 mv.show_histogram()
                 mv.show_statistics()
             # add a button to download the 
             with st.expander("Power Flow Data", expanded=False):
-                mv.PSA()
+                mv.PSA()'''
             with st.expander("Raw Data", expanded=False):
                 mv.show_raw_data()
             
@@ -116,8 +119,8 @@ def mv_page():
                 # remove the hint above
                 placeholder.empty()
             # add a button to download the data
-            with st.expander("Power Flow Data", expanded=False):
-                mv.PSA()
+            '''with st.expander("Power Flow Data", expanded=False):
+                mv.PSA()'''
             with st.expander("Raw Data", expanded=False):
                 mv.show_raw_data()
             
