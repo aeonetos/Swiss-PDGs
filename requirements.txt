@@ -1,7 +1,7 @@
-geopandas==0.12.0
+geopandas
 numpy
 pandas
-pydeck==0.8.1b1
+pydeck
 streamlit
 streamlit-jupyter
 folium==0.14.0
