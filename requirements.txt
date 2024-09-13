@@ -11,6 +11,12 @@ shapely
 scipy
 scikit-learn
 streamlit-extras
-pandapower
 matplotlib
+os
+copy
+json
+ast
+shutil
+plotly
+
 

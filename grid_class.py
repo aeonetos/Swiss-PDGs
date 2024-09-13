@@ -13,10 +13,7 @@ import shutil
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.stats import norm
-from sklearn.neighbors import KernelDensity
-from scipy.stats import gaussian_kde
-import plotly.express as px
-import matplotlib.pyplot as plt
+#import plotly.express as px
 
 def copy_files(source_folder, destination_folder, files_to_copy):
     # Ensure the destination folder exists; create it if not.
@@ -672,7 +669,7 @@ class GridVisualize:
             st.write('The data is not available')
            
         
-    def show_histogram(self):
+    '''def show_histogram(self):
         """
         This function shows the histogram of the power demands in certain region
         :return:
@@ -695,7 +692,7 @@ class GridVisualize:
         kde = KernelDensity(bandwidth=1.0, kernel='gaussian', )
         kde.fit(demand_arr[:, None])
         logprob = kde.score_samples(xs[:, None])
-        ax_density.plot(xs, np.exp(logprob), color='orange')
+        ax_density.plot(xs, np.exp(logprob), color='orange')'''
 
         # kde = gaussian_kde(demand_arr, bw_method='silverman')
         # ax_density.plot(xs, kde(xs), color='orange')
