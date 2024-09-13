@@ -7,7 +7,7 @@ streamlit-jupyter
 folium==0.14.0
 streamlit-folium==0.16.0
 leafmap
-shapely==2.0.1
+shapely==1.8.5
 scipy
 scikit-learn
 streamlit-extras
