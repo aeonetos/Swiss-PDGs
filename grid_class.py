@@ -697,7 +697,7 @@ class GridVisualize:
         # kde = gaussian_kde(demand_arr, bw_method='silverman')
         # ax_density.plot(xs, kde(xs), color='orange')
 
-        st.pyplot(fig)
+        #st.pyplot(fig)
     
     '''def PSA(self):
         voltage=pd.DataFrame(columns=['grid_id','voltage'])
