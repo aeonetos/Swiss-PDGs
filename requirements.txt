@@ -2,7 +2,7 @@ geopandas
 numpy
 pandas
 pydeck
-streamlit!=1.34.0
+streamlit
 streamlit-jupyter
 folium
 streamlit-folium
@@ -12,10 +12,6 @@ scipy
 scikit-learn
 streamlit-extras
 matplotlib
-copy
-json
-ast
 shutil
-plotly
 
 
