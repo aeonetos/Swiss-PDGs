@@ -12,6 +12,5 @@ scipy
 scikit-learn
 streamlit-extras
 matplotlib
-shutil
 
 
