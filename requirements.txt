@@ -12,7 +12,6 @@ scipy
 scikit-learn
 streamlit-extras
 matplotlib
-os
 copy
 json
 ast
