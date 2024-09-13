@@ -15,7 +15,6 @@ import numpy as np
 from scipy.stats import norm
 from sklearn.neighbors import KernelDensity
 from scipy.stats import gaussian_kde
-import pandapower as pp
 import plotly.express as px
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -704,7 +703,7 @@ class GridVisualize:
 
         st.pyplot(fig)
     
-    def PSA(self):
+    '''def PSA(self):
         voltage=pd.DataFrame(columns=['grid_id','voltage'])
         current=pd.DataFrame(columns=['grid_id','current'])
         for i in self.test_id[:20]:
@@ -755,7 +754,7 @@ class GridVisualize:
             fig = px.box(current, x='grid_id', y='current', title='Current Distribution by Grid')
             #rename the y axis to current loading (%)
             fig.update_yaxes(title_text='Current Loading (%)')
-            st.plotly_chart(fig)
+            st.plotly_chart(fig)'''
         
 
     def count_demand():
