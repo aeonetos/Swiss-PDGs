@@ -17,7 +17,6 @@ from sklearn.neighbors import KernelDensity
 from scipy.stats import gaussian_kde
 import plotly.express as px
 import matplotlib.pyplot as plt
-import seaborn as sns
 
 def copy_files(source_folder, destination_folder, files_to_copy):
     # Ensure the destination folder exists; create it if not.
