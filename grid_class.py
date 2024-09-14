@@ -1,5 +1,5 @@
 import folium
-from streamlit_folium import st_folium, folium_static
+from streamlit_folium import st_folium
 import streamlit as st
 import geopandas as gpd
 import numpy as np
@@ -12,13 +12,6 @@ import ast
 import shutil
 import matplotlib.pyplot as plt
 import numpy as np
-from scipy.stats import norm
-from sklearn.neighbors import KernelDensity
-from scipy.stats import gaussian_kde
-import pandapower as pp
-import plotly.express as px
-import matplotlib.pyplot as plt
-import seaborn as sns
 
 def copy_files(source_folder, destination_folder, files_to_copy):
     # Ensure the destination folder exists; create it if not.
@@ -283,7 +276,7 @@ class GridVisualize:
             plotchoose = column_layer
             pitch=75
 
-        if _self.grid_type == 'MV':
+        '''if _self.grid_type == 'MV':
             polygon_plot = pd.read_csv('data_processing/canton_coordinates_plot.csv')
             polygon_plot['coordinates'] = polygon_plot['coordinates'].apply(ast.literal_eval)
         else:
@@ -292,19 +285,19 @@ class GridVisualize:
         polygonlayer = pdk.Layer(
             "PolygonLayer",
             polygon_plot,
-            # id="geojson",
-            # opacity=0.8,
-            # stroked=False,
+            id="geojson",
+            opacity=0.05,
+            stroked=False,
             get_polygon="coordinates",
-            # filled=True,
-            # extruded=True,
-            # wireframe=True,
+            filled=True,
+            extruded=True,
+            wireframe=True,
             get_fill_color="fill_color",
-            # get_line_color=[255, 255, 255],
+            get_line_color=[255, 255, 255],
             auto_highlight=False,
             pickable=True,
-        )
-        textlayer = pdk.Layer(
+        )'''
+        '''textlayer = pdk.Layer(
             "TextLayer",
             data=polygon_plot,
             get_position=['centroid_x', 'centroid_y'],
@@ -314,7 +307,7 @@ class GridVisualize:
             get_size=14,
             get_text_anchor="'upper'",
             get_alignment_baseline="'center'",
-        )
+        )'''
 
         #add tooltip
 
@@ -672,7 +665,7 @@ class GridVisualize:
             st.write('The data is not available')
            
         
-    def show_histogram(self):
+    ''' def show_histogram(self):
         """
         This function shows the histogram of the power demands in certain region
         :return:
@@ -700,9 +693,9 @@ class GridVisualize:
         # kde = gaussian_kde(demand_arr, bw_method='silverman')
         # ax_density.plot(xs, kde(xs), color='orange')
 
-        st.pyplot(fig)
+        st.pyplot(fig)'''
     
-    def PSA(self):
+    '''def PSA(self):
         voltage=pd.DataFrame(columns=['grid_id','voltage'])
         current=pd.DataFrame(columns=['grid_id','current'])
         for i in self.test_id[:20]:
@@ -753,7 +746,7 @@ class GridVisualize:
             fig = px.box(current, x='grid_id', y='current', title='Current Distribution by Grid')
             #rename the y axis to current loading (%)
             fig.update_yaxes(title_text='Current Loading (%)')
-            st.plotly_chart(fig)
+            st.plotly_chart(fig)'''
         
 
 
