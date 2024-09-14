@@ -13,7 +13,12 @@ import shutil
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.stats import norm
-#import plotly.express as px
+from sklearn.neighbors import KernelDensity
+from scipy.stats import gaussian_kde
+import pandapower as pp
+import plotly.express as px
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 def copy_files(source_folder, destination_folder, files_to_copy):
     # Ensure the destination folder exists; create it if not.
@@ -324,8 +329,6 @@ class GridVisualize:
             layers=[
                 pathlayer,
                 plotchoose,
-                polygonlayer,
-                textlayer,
             ]
         )
         st.write(pydeck_layers)
@@ -669,7 +672,7 @@ class GridVisualize:
             st.write('The data is not available')
            
         
-    '''def show_histogram(self):
+    def show_histogram(self):
         """
         This function shows the histogram of the power demands in certain region
         :return:
@@ -692,14 +695,14 @@ class GridVisualize:
         kde = KernelDensity(bandwidth=1.0, kernel='gaussian', )
         kde.fit(demand_arr[:, None])
         logprob = kde.score_samples(xs[:, None])
-        ax_density.plot(xs, np.exp(logprob), color='orange')'''
+        ax_density.plot(xs, np.exp(logprob), color='orange')
 
         # kde = gaussian_kde(demand_arr, bw_method='silverman')
         # ax_density.plot(xs, kde(xs), color='orange')
 
-        #st.pyplot(fig)
+        st.pyplot(fig)
     
-    '''def PSA(self):
+    def PSA(self):
         voltage=pd.DataFrame(columns=['grid_id','voltage'])
         current=pd.DataFrame(columns=['grid_id','current'])
         for i in self.test_id[:20]:
@@ -750,11 +753,20 @@ class GridVisualize:
             fig = px.box(current, x='grid_id', y='current', title='Current Distribution by Grid')
             #rename the y axis to current loading (%)
             fig.update_yaxes(title_text='Current Loading (%)')
-            st.plotly_chart(fig)'''
+            st.plotly_chart(fig)
         
 
-    def count_demand():
-        pass
+
+
+
+
+
+
+
+
+
+
+
 
 
 
