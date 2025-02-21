@@ -1,5 +1,5 @@
-# Inferred low- and medium-voltage distribution grid models for Switzerland
-Welcome to our repository, where we share our inferred geo-referenced models of Switzerland's low- and medium-voltage power distribution grids (PDGs). These models were obtained using the framework introduced by [A. Oneto et. al](https://doi.org/10.36227/techrxiv.24607662.v3), and stem from the meticulous analysis of publicly available data on power demand and transport infrastructure. With 879 medium-voltage grids and 34,920 low-voltage grids, our dataset represents all of Switzerland's power distribution landscape. We invite you to harness this rich dataset to explore, analyze, and contribute to a deeper understanding of large-scale power distribution systems.
+# Synthetic low- and medium-voltage distribution grid models for Switzerland
+Welcome to our repository, where we share our synthetic geo-referenced models of Switzerland's low- and medium-voltage power distribution grids (PDGs). These models were obtained using the framework introduced by [A. Oneto et. al](https://doi.org/10.36227/techrxiv.24607662.v3), and stem from the meticulous analysis of publicly available data on power demand and transport infrastructure. With 879 medium-voltage grids and 34,920 low-voltage grids, our dataset represents all of Switzerland's power distribution landscape. We invite you to harness this rich dataset to explore, analyze, and contribute to a deeper understanding of large-scale power distribution systems.
 
 **When using the data, the article must be referenced and acknowledged**
 
@@ -30,7 +30,7 @@ Note that an edge and a node file define every grid. Hence, in the cases when no
 <img width="500" alt="lvgrids" src="https://github.com/aeonetos/Swiss-PDGs/assets/101415556/309d8564-474e-4bf5-831b-67b1670a8485">
 </p>
 <p align="center">
-Inferred LV grids in Switzerland.
+Synthetic LV grids in Switzerland.
 </p>
 
 - MV: 879 grids.
@@ -39,7 +39,7 @@ Inferred LV grids in Switzerland.
 <img width="500" alt="mvall" src="https://github.com/aeonetos/Swiss-PDGs/assets/101415556/d165d1e9-e56c-486a-b6f7-ca3238edbee7">
 </p>
 <p align="center">
-Inferred MV grids in Switzerland.
+Synthetic MV grids in Switzerland.
 </p>
 
 ### Pandapower data
